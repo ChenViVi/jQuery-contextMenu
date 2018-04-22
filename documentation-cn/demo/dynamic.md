@@ -2,14 +2,14 @@
 currentMenu: dynamic 
 ---
 
-# Demo: Adding new Context Menu Triggers
+# 示例： Adding new Context Menu Triggers
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [Example code](#example-code)
-- [Example HTML](#example-html)
+- [JavaScript代码示例](#example-code)
+- [HTML代码示例](#example-html)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -20,14 +20,14 @@ currentMenu: dynamic
   <button id="add-trigger" class="btn btn-default" type="submit">Button</button>    
 </div>
 
-## Example code
+## JavaScript代码示例
 
 <script type="text/javascript" class="showcase">
 $(function(){
     // add new trigger
     $('#add-trigger').on('click', function(e) {
         $('<div class="context-menu-one clear btn btn-neutral menu-injected">'
-            + 'right click me <em>(injected)</em>'
+            + '右键点击我 <em>(injected)</em>'
             + '</div><br>').insertBefore(this);
         // not need for re-initializing $.contextMenu here :)
     });
@@ -51,5 +51,5 @@ $(function(){
 });
 </script>
 
-## Example HTML
+## HTML代码示例
 <div style="display:none;" class="showcase" data-showcase-import=".context-menu-one"></div>

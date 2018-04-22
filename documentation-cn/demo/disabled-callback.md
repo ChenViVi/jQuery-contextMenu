@@ -2,21 +2,21 @@
 currentMenu: disabled-callback 
 ---
 
-# Demo: Disabled Callback
+# 示例： Disabled Callback
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [Example code](#example-code)
-- [Example HTML](#example-html)
+- [JavaScript代码示例](#example-code)
+- [HTML代码示例](#example-html)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
-<span class="context-menu-one btn btn-neutral">right click me</span>
+<span class="context-menu-one btn btn-neutral">右键点击我</span>
 
-## Example code
+## JavaScript代码示例
 
 <script type="text/javascript" class="showcase">
 $(function(){
@@ -42,5 +42,5 @@ $(function(){
 });
 </script>
 
-## Example HTML
+## HTML代码示例
 <div style="display:none;" class="showcase" data-showcase-import=".context-menu-one"></div>

@@ -2,14 +2,14 @@
 currentMenu: trigger-custom  
 ---
 
-# Demo: Custom Activated Context Menu
+# 示例： Custom Activated Context Menu
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [Example code](#example-code)
-- [Example HTML](#example-html)
+- [JavaScript代码示例](#example-code)
+- [HTML代码示例](#example-html)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -17,7 +17,7 @@ currentMenu: trigger-custom
 
 <button id="activate-menu" class="btn btn-default" type="submit">Button</button>
 
-## Example code
+## JavaScript代码示例
 
 <script type="text/javascript" class="showcase">
 $(function(){
@@ -49,5 +49,5 @@ $(function(){
 });
 </script>
 
-## Example HTML
+## HTML代码示例
 <div style="display:none;" class="showcase" data-showcase-import=".context-menu-one"></div>

@@ -2,7 +2,7 @@
 currentMenu: menu-title  
 ---
 
-# Demo: Menu Title
+# 示例： Menu Title
 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -10,15 +10,15 @@ currentMenu: menu-title
 
 
 - [Example CSS](#example-css)
-- [Example code](#example-code)
-- [Example HTML](#example-html)
+- [JavaScript代码示例](#example-code)
+- [HTML代码示例](#example-html)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
-<span class="context-menu-one btn btn-neutral">right click me</span>
-<span class="context-menu-two btn btn-neutral">right click me</span>
-<span class="context-menu-three btn btn-neutral">right click me</span>
+<span class="context-menu-one btn btn-neutral">右键点击我</span>
+<span class="context-menu-two btn btn-neutral">右键点击我</span>
+<span class="context-menu-three btn btn-neutral">右键点击我</span>
 
 
 
@@ -64,7 +64,7 @@ currentMenu: menu-title
     }
 </style>
 
-## Example code
+## JavaScript代码示例
 
 <script type="text/javascript" class="showcase">
 $(function(){
@@ -129,14 +129,14 @@ $(function(){
 });
 </script>
 
-## Example HTML
+## HTML代码示例
 
 ```html
-<span class="context-menu-one btn btn-neutral">right click me</span>
+<span class="context-menu-one btn btn-neutral">右键点击我</span>
 
-<span class="context-menu-two btn btn-neutral">right click me</span>
+<span class="context-menu-two btn btn-neutral">右键点击我</span>
 
-<span class="context-menu-three btn btn-neutral">right click me</span>
+<span class="context-menu-three btn btn-neutral">右键点击我</span>
 ```
 
 
