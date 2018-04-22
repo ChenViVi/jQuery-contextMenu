@@ -26,15 +26,15 @@ $(function(){
             window.console && console.log(m) || alert(m); 
         },
         items: {
-            "edit": {name: "Edit", icon: "edit", accesskey: "e"},
-            "cut": {name: "Cut", icon: "cut", accesskey: "c"},
+            "edit": {name: "编辑", icon: "edit", accesskey: "e"},
+            "cut": {name: "剪切", icon: "cut", accesskey: "c"},
             // first unused character is taken (here: o)
-            "copy": {name: "Copy", icon: "copy", accesskey: "c o p y"},
+            "copy": {name: "复制", icon: "copy", accesskey: "c o p y"},
             // words are truncated to their first letter (here: p)
-            "paste": {name: "Paste", icon: "paste", accesskey: "cool paste"},
-            "delete": {name: "Delete", icon: "delete"},
+            "paste": {name: "粘贴", icon: "paste", accesskey: "cool paste"},
+            "delete": {name: "删除", icon: "delete"},
             "sep1": "---------",
-            "quit": {name: "Quit", icon: function($element, key, item){ return 'context-menu-icon context-menu-icon-quit'; }}
+            "quit": {name: "退出", icon: function($element, key, item){ return 'context-menu-icon context-menu-icon-quit'; }}
         }
     });
 });

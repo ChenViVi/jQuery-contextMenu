@@ -27,9 +27,9 @@ $(function(){
                 window.console && console.log(m) || alert(m);
             },
             items: {
-                "edit": {name: "Edit", icon: "edit"},
-                "cut": {name: "Cut", icon: "cut"},
-                "copy": {name: "Copy", icon: "copy"}
+                "edit": {name: "编辑", icon: "edit"},
+                "cut": {name: "剪切", icon: "cut"},
+                "copy": {name: "复制", icon: "copy"}
             }
         };
     }

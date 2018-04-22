@@ -31,13 +31,13 @@ $(function(){
             window.console && console.log(m) || alert(m); 
         },
         items: {
-            "edit": {name: "Edit", icon: "edit"},
-            "cut": {name: "Cut", icon: "cut"},
-            "copy": {name: "Copy", icon: "copy"},
-            "paste": {name: "Paste", icon: "paste"},
-            "delete": {name: "Delete", icon: "delete"},
+            "edit": {name: "编辑", icon: "edit"},
+            "cut": {name: "剪切", icon: "cut"},
+            "copy": {name: "复制", icon: "copy"},
+            "paste": {name: "粘贴", icon: "paste"},
+            "delete": {name: "删除", icon: "delete"},
             "sep1": "---------",
-            "quit": {name: "Quit", icon: function($element, key, item){ return 'context-menu-icon context-menu-icon-quit'; }}
+            "quit": {name: "退出", icon: function($element, key, item){ return 'context-menu-icon context-menu-icon-quit'; }}
         }
     });
 });

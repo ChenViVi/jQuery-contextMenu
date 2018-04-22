@@ -57,7 +57,7 @@ $(function(){
         items: {
             open: {name: "Open", callback: $.noop},
             label: {type: "label", customName: "Label"},
-            edit: {name: "Edit", callback: $.noop}
+            edit: {name: "编辑", callback: $.noop}
         }
     });
 });

@@ -47,8 +47,8 @@ currentMenu: async-promise
                         console.log(m);
                     },
                     items: {
-                        "edit": { name: "Edit", icon: "edit" },
-                        "cut": { name: "Cut", icon: "cut" },
+                        "edit": { name: "编辑", icon: "edit" },
+                        "cut": { name: "剪切", icon: "cut" },
                         "status": {
                             name: "Status",
                             icon: "delete",

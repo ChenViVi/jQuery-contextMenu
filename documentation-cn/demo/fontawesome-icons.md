@@ -28,7 +28,7 @@ The menu allows you to use [FontAwesome](http://fontawesome.io/) [icons](http://
             window.console && console.log(m) || alert(m);
         },
         items: {
-            "edit": {name: "Edit", icon: "fa-edit"},
+            "edit": {name: "编辑", icon: "fa-edit"},
             "cut": {name: "Beer", icon: "fa-beer"},
             copy: {name: "Cloud download", icon: "fa-cloud-download"},
             "paste": {name: "Certificate", icon: "fa-certificate"}
