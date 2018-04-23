@@ -2,21 +2,21 @@
 currentMenu: simple-context-menu
 ---
 
-# Demo: Simple Context Menu
+# 示例：快捷菜单的简单使用
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [Example code: Simple Context Menu](#example-code-simple-context-menu)
-- [Example HTML: Simple Context Menu](#example-html-simple-context-menu)
-- [jQuery Context Menu Demo Gallery](#jquery-context-menu-demo-gallery)
+- [JavaScript代码示例: 快捷菜单的简单使用](#example-code-simple-context-menu)
+- [HTML代码示例: 快捷菜单的简单使用](#example-html-simple-context-menu)
+- [jQuery Context Menu 示例集合](#jquery-context-menu-demo-gallery)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-<span class="context-menu-one btn btn-neutral">right click me</span>
+<span class="context-menu-one btn btn-neutral">右键点击我</span>
 
-## Example code: Simple Context Menu
+## JavaScript代码示例：快捷菜单的简单使用
 
 <script type="text/javascript" class="showcase">
     $(function() {
@@ -27,50 +27,50 @@ currentMenu: simple-context-menu
                 window.console && console.log(m) || alert(m); 
             },
             items: {
-                "edit": {name: "Edit", icon: "edit"},
-                "cut": {name: "Cut", icon: "cut"},
-               copy: {name: "Copy", icon: "copy"},
-                "paste": {name: "Paste", icon: "paste"},
-                "delete": {name: "Delete", icon: "delete"},
+                "edit": {name: "编辑", icon: "edit"},
+                "cut": {name: "剪切", icon: "cut"},
+               copy: {name: "复制", icon: "copy"},
+                "paste": {name: "粘贴", icon: "paste"},
+                "delete": {name: "删除", icon: "delete"},
                 "sep1": "---------",
-                "quit": {name: "Quit", icon: function(){
+                "quit": {name: "退出", icon: function(){
                     return 'context-menu-icon context-menu-icon-quit';
                 }}
             }
         });
         
         $('.context-menu-one').on('click', function(e){
-            console.log('clicked', this);
+            console.log('你点击了：', this);
         })    
     });
 </script>
 
-## Example HTML: Simple Context Menu
+## HTML代码示例：快捷菜单的简单使用
 <div style="display:none;" class="showcase" data-showcase-import=".context-menu-one"></div>
 
-## jQuery Context Menu Demo Gallery
+## jQuery Context Menu 示例集合
 
-*   [Simple Context Menu](demo.html)
-*   [Context Menu on DOM Element](demo/on-dom-element.html)
-*   [Adding new Context Menu Triggers](demo/dynamic.html)
-*   [Create Context Menu on demand](demo/dynamic-create.html)
-*   [Create Context Menu (asynchronous)](demo/async-create.html)
-*   [Keeping the context menu open](demo/keeping-contextmenu-open.html)
-*   [Command's action (callbacks)](demo/callback.html)
-*   [Left-Click Trigger](demo/trigger-left-click.html)
-*   [Swipe Trigger](demo/trigger-swipe.html)
-*   [Hover Activated Context Menu](demo/trigger-hover.html)
-*   [Hover Activated Context Menu With Autohide](demo/trigger-hover-autohide.html)
-*   [Custom Activated Context Menu](demo/trigger-custom.html)
-*   [Disabled Menu](demo/disabled-menu.html)
-*   [Disabled Command](demo/disabled.html)
-*   [Disabled Callback Command](demo/disabled-callback.html)
-*   [Changing Command's disabled status](demo/disabled-changing.html)
-*   [Accesskeys](demo/accesskeys.html)
-*   [Submenus](demo/sub-menus.html)
-*   [Input Commands](demo/input.html)
-*   [Custom Command Types](demo/custom-command.html)
-*   [Menus with titles](demo/menu-title.html)
-*   [Importing HTML5 <menu type="context">](demo/html5-import.html)
+*   [快捷菜单的简单使用](demo.html)
+*   [DOM元素调用快捷菜单](demo/on-dom-element.html)
+*   [为快捷菜单增加新的触发器](demo/dynamic.html)
+*   [动态加载快捷菜单](demo/dynamic-create.html)
+*   [异步加载快捷菜单](demo/async-create.html)
+*   [子菜单被点击后不自动隐藏](demo/keeping-contextmenu-open.html)
+*   [快捷菜单点击事件回调方法](demo/callback.html)
+*   [通过左键点击触发快捷菜单](demo/trigger-left-click.html)
+*   [在触控设备上通过滑动动作触发快捷菜单](demo/trigger-swipe.html)
+*   [通过鼠标悬停动作触发快捷菜单](demo/trigger-hover.html)
+*   [通过鼠标悬停动作触发快捷菜单并自动隐藏](demo/trigger-hover-autohide.html)
+*   [自定义快捷菜单的触发器](demo/trigger-custom.html)
+*   [禁用快捷菜单](demo/disabled-menu.html)
+*   [禁用菜单项](demo/disabled.html)
+*   [禁用回调方法](demo/disabled-callback.html)
+*   [改变菜单项](demo/disabled-changing.html)
+*   [Accesskeys（快捷键）](demo/accesskeys.html)
+*   [多级菜单](demo/sub-menus.html)
+*   [带表单的快捷菜单](demo/input.html)
+*   [自定义菜单项](demo/custom-command.html)
+*   [带标题的快捷菜单](demo/menu-title.html)
+*   [导入 HTML5 中的menu元素<menu type="context">](demo/html5-import.html)
 *   [HTML5 Polyfill](demo/html5-polyfill.html)
 *   [HTML5 Polyfill (Firefox)](demo/html5-polyfill-firefox8.html)
