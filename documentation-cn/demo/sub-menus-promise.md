@@ -2,23 +2,23 @@
 currentMenu: sub-menus-promise  
 ---
 
-# 示例： Submenus with promise
+# 示例： 异步加载子菜单
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [JavaScript代码示例](#example-code)
-- [HTML代码示例](#example-html)
+- [JavaScript 代码示例](#example-code)
+- [HTML 代码示例](#example-html)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 <span class="context-menu-one btn btn-neutral">右键点击我</span>
 
-## JavaScript代码示例
+## JavaScript 代码示例
 
 <script type="text/javascript" class="showcase">
-var errorItems = { "errorItem": { name: "Could not load items" },};//example usage if you want to reject promise
+var errorItems = { "errorItem": { name: "无法加载项目" }};//example usage if you want to reject promise
     var loadItems = function () {//example method that will eventually do an async call
         var dfd = jQuery.Deferred();
         setTimeout(function () {
@@ -27,12 +27,12 @@ var errorItems = { "errorItem": { name: "Could not load items" },};//example usa
         //setTimeout(function () {
         //    dfd.reject(errorItems);
         //}, 1000); //could be used to reject items, providing the same format list.
-        return dfd.promise();//return a jquery promise, see http://api.jquery.com/deferred.promise/
+        return dfd.promise();//返回 jquery promise对象, 请查看 https://www.jquery123.com/deferred.promise/
     };
 
     var subItems = {
-        "sub1": { name: "Submenu1", icon: "edit" },
-        "sub2": { name: "Submenu2", icon: "cut" },
+        "sub1": { name: "二级菜单 1", icon: "edit" },
+        "sub2": { name: "二级菜单 2", icon: "cut" },
     };
     //normal context menu initialization.
     $.contextMenu({
@@ -40,7 +40,7 @@ var errorItems = { "errorItem": { name: "Could not load items" },};//example usa
         build: function ($trigger, e) {
             return {
                 callback: function (key, options) {
-                    var m = "clicked: " + key;
+                    var m = "你点击了： " + key;
                     console.log(m);
                 },
                 items: {
@@ -49,7 +49,7 @@ var errorItems = { "errorItem": { name: "Could not load items" },};//example usa
                     "status": {
                         name: "Status",
                         icon: "delete",
-                        items: loadItems(),//providing promise instead of items
+                        items: loadItems(),//返回一个promise对象而不是子菜单项
                     },
                 }
             };
@@ -57,5 +57,5 @@ var errorItems = { "errorItem": { name: "Could not load items" },};//example usa
     });
 </script>
 
-## HTML代码示例
+## HTML 代码示例
 <div style="display:none;" class="showcase" data-showcase-import=".context-menu-one"></div>

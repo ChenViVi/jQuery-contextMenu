@@ -2,20 +2,20 @@
 currentMenu: trigger-left-click  
 ---
 
-# 示例： Left-Click Trigger
+# 示例： 通过左键点击触发菜单
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [JavaScript代码示例](#example-code)
-- [HTML代码示例](#example-html)
+- [JavaScript 代码示例](#example-code)
+- [HTML 代码示例](#example-html)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-<span class="context-menu-one btn btn-neutral">left click me</span>
+<span class="context-menu-one btn btn-neutral">左键点击我</span>
 
-## JavaScript代码示例
+## JavaScript 代码示例
 
 <script type="text/javascript" class="showcase">
 $(function(){
@@ -23,7 +23,7 @@ $(function(){
         selector: '.context-menu-one', 
         trigger: 'left',
         callback: function(key, options) {
-            var m = "clicked: " + key;
+            var m = "你点击了： " + key;
             window.console && console.log(m) || alert(m); 
         },
         items: {
@@ -39,5 +39,5 @@ $(function(){
 });
 </script>
 
-## HTML代码示例
+## HTML 代码示例
 <div style="display:none;" class="showcase" data-showcase-import=".context-menu-one"></div>

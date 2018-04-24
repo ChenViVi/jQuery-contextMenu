@@ -2,32 +2,32 @@
 currentMenu: dynamic-create 
 ---
 
-# 示例： Create Context Menu on Demand
+# 示例： 动态加载菜单
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [JavaScript代码示例](#example-code)
-- [HTML代码示例](#example-html)
+- [JavaScript 代码示例](#example-code)
+- [HTML 代码示例](#example-html)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 <span class="context-menu-one btn btn-neutral">右键点击我</span>
 
-## JavaScript代码示例
+## JavaScript 代码示例
 
 <script type="text/javascript" class="showcase">
 $(function(){
     $.contextMenu({
         selector: '.context-menu-one', 
         build: function($trigger, e) {
-            // this callback is executed every time the menu is to be shown
-            // its results are destroyed every time the menu is hidden
-            // e is the original contextmenu event, containing e.pageX and e.pageY (amongst other data)
+            // 每次菜单出现，此方法都会执行
+            // 每次菜单隐藏，返回值都会被销毁
+            // is the original contextmenu event, containing e.pageX and e.pageY (amongst other data)
             return {
                 callback: function(key, options) {
-                    var m = "clicked: " + key;
+                    var m = "你点击了： " + key;
                     window.console && console.log(m) || alert(m); 
                 },
                 items: {
@@ -45,5 +45,5 @@ $(function(){
 });
 </script>
 
-## HTML代码示例
+## HTML 代码示例
 <div style="display:none;" class="showcase" data-showcase-import=".context-menu-one"></div>

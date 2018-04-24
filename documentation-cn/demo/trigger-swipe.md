@@ -2,31 +2,30 @@
 currentMenu: trigger-swipe
 ---
 
-# 示例： Swipe Trigger
+# 示例： 在触控设备上通过滑动触发菜单
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [JavaScript代码示例](#example-code)
-- [HTML代码示例](#example-html)
+- [JavaScript 代码示例](#example-code)
+- [HTML 代码示例](#example-html)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.12/jquery.touchSwipe.min.js'></script>
 
-This demo uses the (third party) [TouchSwipe](https://github.com/mattbryson/TouchSwipe-Jquery-Plugin) plugin.
+本示例用到了第三方库 [TouchSwipe](https://github.com/mattbryson/TouchSwipe-Jquery-Plugin)
 
 
-<span class="context-menu-one btn btn-neutral">swype right</span>
+<span class="context-menu-one btn btn-neutral">在触控设备上滑动</span>
 
-## JavaScript代码示例
+## JavaScript 代码示例
 
 <script type="text/javascript" class="showcase">
 $(function(){
-    // make swipe right open the menu
+    // 使得在触控设备上滑动时能打开菜单
     $('.context-menu-one').swipe({
-        // see http://labs.skinkers.com/touchSwipe/
         swipe: function(event, direction, distance, duration, fingerCount) {
             if (fingerCount === 1) {
                 $(this).contextMenu({
@@ -36,24 +35,24 @@ $(function(){
             }
         }
     });
-    
+
     $.contextMenu({
-        selector: '.context-menu-one', 
+        selector: '.context-menu-one',
         trigger: 'none',
         callback: function(key, options) {
-            var m = "clicked: " + key;
-            window.console && console.log(m) || alert(m); 
+            var m = "你点击了： " + key;
+            window.console && console.log(m) || alert(m);
         },
         items: {
             "edit": {name: "编辑", icon: "edit"},
             "cut": {name: "剪切", icon: "cut"},
             "copy": {name: "复制", icon: "copy"},
             "fold1a": {
-                "name": "Some submenu", 
+                "name": "二级菜单",
                 "items": {
-                    "fold1a-key1": {"name": "echo"},
-                    "fold1a-key2": {"name": "foxtrot"},
-                    "fold1a-key3": {"name": "golf"}
+                    "fold1a-key1": {"name": "三级菜单 1"},
+                    "fold1a-key2": {"name": "三级菜单 2"},
+                    "fold1a-key3": {"name": "三级菜单 3"}
                 }
             }
         }
@@ -61,5 +60,5 @@ $(function(){
 });
 </script>
 
-## HTML代码示例
+## HTML 代码示例
 <div style="display:none;" class="showcase" data-showcase-import=".context-menu-one"></div>

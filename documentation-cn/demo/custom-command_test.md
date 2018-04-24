@@ -2,22 +2,22 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [示例： Custom command](#demo-custom-command)
-  - [JavaScript代码示例](#example-code)
-  - [HTML代码示例](#example-html)
+- [示例： 自定义菜单项](#demo-custom-command)
+  - [JavaScript 代码示例](#example-code)
+  - [HTML 代码示例](#example-html)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# 示例： Custom command
+# 示例： 自定义菜单项
 
 <span class="context-menu-one btn btn-neutral">右键点击我</span>
 
-## JavaScript代码示例
+## JavaScript 代码示例
 
 <script type="text/javascript" class="showcase">
 $(function(){
     /**************************************************
-     * Custom Command Handler
+     * 自定义菜单项
      **************************************************/
     $.contextMenu.types.label = function(item, opt, root) {
         // this === item.$node
@@ -29,41 +29,41 @@ $(function(){
             + '<li class="label4" title="label 4">label 4</li></ul>')
             .appendTo(this)
             .on('click', 'li', function() {
-                var message = "text: " + $(this).text();      
+                var message = "你点击了： " + $(this).text();      
                 $('#msg').text($('#msg').text() + ' | ' + message);
                 
-                // hide the menu
+                // 隐藏菜单
                 root.$menu.trigger('contextmenu:hide');
             });
             
         this.addClass('labels').on('contextmenu:focus', function(e) {
-            // setup some awesome stuff
+            // 菜单获得焦点事件，在这里做自定义菜单项的初始化操作
         }).on('contextmenu:blur', function(e) {
-            // tear down whatever you did
+            // 菜单失去焦点事件，在这里做自定义菜单项的销毁操作
         }).on('keydown', function(e) {
-            // some funky key handling, maybe?
+            // 菜单键盘按下事件
         });
     };
     
     /**************************************************
-     * Context-Menu with custom command "label"
+     * 使用"label"菜单来将以上内容加入菜单
      **************************************************/
     $.contextMenu({
         selector: '.context-menu-one', 
         callback: function(key, options) {
-            var message = "clicked: " + key;
+            var message = "你点击了： " + key;
             $('#msg').text(message);
         },
         items: {
-            open: {name: "Open", callback: $.noop},
-            label: {type: "label", customName: "Label"},
+            open: {name: "打开", callback: $.noop},
+            label: {type: "标签", customName: "Label"},
             edit: {name: "编辑", callback: $.noop}
         }
     });
 });
 </script>
 
-## HTML代码示例
+## HTML 代码示例
 <div style="display:none;" class="showcase" data-showcase-import=".context-menu-one"></div>
 
 <div id="msg"></div>

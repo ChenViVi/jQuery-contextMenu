@@ -2,30 +2,30 @@
 currentMenu: disabled-menu 
 ---
 
-# 示例： Disabled menu
+# 示例： 禁用菜单
 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [JavaScript代码示例](#example-code)
-- [HTML代码示例](#example-html)
+- [JavaScript 代码示例](#example-code)
+- [HTML 代码示例](#example-html)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 <span class="context-menu-one btn btn-neutral context-menu-disabled">右键点击我</span>
 
-<button type="button btn btn-neutral" id="toggle-disabled">Enable Menu</button>
+<button type="button btn btn-neutral" id="toggle-disabled">启用菜单</button>
 
-## JavaScript代码示例
+## JavaScript 代码示例
 
 <script type="text/javascript" class="showcase">
 $(function(){
     $.contextMenu({
         selector: '.context-menu-one', 
         callback: function(key, options) {
-            var m = "clicked: " + key;
+            var m = "你点击了： " + key;
             window.console && console.log(m) || alert(m); 
         },
         items: {
@@ -44,15 +44,15 @@ $(function(){
         var $this = $(this),
             $trigger = $('.context-menu-one');
         if ($trigger.hasClass('context-menu-disabled')) {
-            $this.text("Disable Menu");
+            $this.text("禁用菜单");
             $trigger.contextMenu(true);
         } else {
-            $this.text("Enable Menu");
+            $this.text("启用菜单");
             $trigger.contextMenu(false);
         }
     });
 });
 </script>
 
-## HTML代码示例
+## HTML 代码示例
 <div style="display:none;" class="showcase" data-showcase-import=".context-menu-one"></div>

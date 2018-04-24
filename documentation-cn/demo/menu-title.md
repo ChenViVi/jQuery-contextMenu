@@ -2,16 +2,16 @@
 currentMenu: menu-title  
 ---
 
-# 示例： Menu Title
+# 示例： 带标题的菜单
 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [Example CSS](#example-css)
-- [JavaScript代码示例](#example-code)
-- [HTML代码示例](#example-html)
+- [CSS 代码示例](#example-css)
+- [JavaScript 代码示例](#example-code)
+- [HTML 代码示例](#example-html)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -22,12 +22,13 @@ currentMenu: menu-title
 
 
 
-## Example CSS
+## CSS 代码示例
 
 <style type="text/css" class="showcase">
-    /* menu header */
-    .css-title:before {
-        content: "some CSS title";
+    /* 菜单标题 */
+
+​    .css-title:before {
+        content: "由 CSS 生成的标题";
         display: block;
         position: absolute;
         top: 0;
@@ -35,7 +36,8 @@ currentMenu: menu-title
         left: 0;
         background: #DDD;
         padding: 2px;
-    
+
+
         font-family: Verdana, Arial, Helvetica, sans-serif;
         font-size: 11px;
         font-weight: bold;
@@ -43,8 +45,8 @@ currentMenu: menu-title
     .css-title :first-child {
         margin-top: 20px;
     }
-    
-    /* menu header via data attribute */
+
+    /* 由 data attribute 生成标题 */
     .data-title:before {
         content: attr(data-menutitle);
         display: block;
@@ -54,7 +56,7 @@ currentMenu: menu-title
         left: 0;
         background: #DDD;
         padding: 2px;
-    
+
         font-family: Verdana, Arial, Helvetica, sans-serif;
         font-size: 11px;
         font-weight: bold;
@@ -64,7 +66,7 @@ currentMenu: menu-title
     }
 </style>
 
-## JavaScript代码示例
+## JavaScript 代码示例
 
 <script type="text/javascript" class="showcase">
 $(function(){
@@ -72,7 +74,7 @@ $(function(){
     $.contextMenu({
         selector: '.context-menu-one',
         callback: function(key, options) {
-            var m = "clicked: " + key;
+            var m = "你点击了： " + key;
             window.console && console.log(m) || alert(m);
         },
         items: {
@@ -85,13 +87,13 @@ $(function(){
             "quit": {name: "退出", icon: function($element, key, item){ return 'context-menu-icon context-menu-icon-quit'; }}
         }
     });
-    
-    // register menu with title provided by CSS
+
+    // 由 CSS 生成菜单标题
     $.contextMenu({
         selector: '.context-menu-two',
-        className: 'css-title',
+        className: '由 CSS 生成的标题',
         callback: function(key, options) {
-            var m = "clicked: " + key;
+            var m = "你点击了： " + key;
             window.console && console.log(m) || alert(m);
         },
         items: {
@@ -104,13 +106,13 @@ $(function(){
             "quit": {name: "退出", icon: function($element, key, item){ return 'context-menu-icon context-menu-icon-quit'; }}
         }
     });
-    
-    // register menu with title provided by data-attribute
+
+    // 由 data-attribute 生成菜单标题
     $.contextMenu({
         selector: '.context-menu-three',
         className: 'data-title',
         callback: function(key, options) {
-            var m = "clicked: " + key;
+            var m = "你点击了： " + key;
             window.console && console.log(m) || alert(m);
         },
         items: {
@@ -123,13 +125,13 @@ $(function(){
             "quit": {name: "退出", icon: function($element, key, item){ return 'context-menu-icon context-menu-icon-quit'; }}
         }
     });
-    
-    // set a title
-    $('.data-title').attr('data-menutitle', "Some JS Title");
+
+    // 由 JS 生成标题
+    $('.data-title').attr('data-menutitle', "由 JS 生成的标题");
 });
 </script>
 
-## HTML代码示例
+## HTML 代码示例
 
 ```html
 <span class="context-menu-one btn btn-neutral">右键点击我</span>
@@ -138,6 +140,3 @@ $(function(){
 
 <span class="context-menu-three btn btn-neutral">右键点击我</span>
 ```
-
-
-

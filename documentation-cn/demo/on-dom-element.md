@@ -2,7 +2,7 @@
 currentMenu: on-dom-element
 ---
 
-# 示例： Context Menu on DOM Element
+# 示例： DOM 元素调用菜单
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -20,7 +20,7 @@ currentMenu: on-dom-element
     <li>右键点击我 4</li>
 </ul>
 
-## JavaScript代码示例
+## JavaScript 代码示例
 
 <script type="text/javascript" class="showcase">
 $(function(){
@@ -43,7 +43,7 @@ $(function(){
 });
 </script>
 
-## HTML代码示例
+## HTML 代码示例
 
 ```html
 <ul id="the-node">

@@ -2,40 +2,40 @@
 currentMenu: dynamic 
 ---
 
-# 示例： Adding new Context Menu Triggers
+# 示例： 为菜单增加新的触发器
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [JavaScript代码示例](#example-code)
-- [HTML代码示例](#example-html)
+- [JavaScript 代码示例](#example-code)
+- [HTML 代码示例](#example-html)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-`jQuery.contextMenu` allows you to define a &lt;menu&gt; before the trigger elements are available.
+`jQuery.contextMenu` 让你能在触发器元素可用之前定义 &lt;menu&gt;
 
 
 <div> 
   <button id="add-trigger" class="btn btn-default" type="submit">Button</button>    
 </div>
 
-## JavaScript代码示例
+## JavaScript 代码示例
 
 <script type="text/javascript" class="showcase">
 $(function(){
     // add new trigger
     $('#add-trigger').on('click', function(e) {
         $('<div class="context-menu-one clear btn btn-neutral menu-injected">'
-            + '右键点击我 <em>(injected)</em>'
+            + '右键点击我 <em>（动态添加的）</em>'
             + '</div><br>').insertBefore(this);
-        // not need for re-initializing $.contextMenu here :)
+        // 不需要再次初始化 $.contextMenu 了 :)
     });
     
     $.contextMenu({
         selector: '.context-menu-one', 
         callback: function(key, options) {
-            var m = "clicked: " + key;
+            var m = "你点击了： " + key;
             window.console && console.log(m) || alert(m); 
         },
         items: {
@@ -51,5 +51,5 @@ $(function(){
 });
 </script>
 
-## HTML代码示例
+## HTML 代码示例
 <div style="display:none;" class="showcase" data-showcase-import=".context-menu-one"></div>

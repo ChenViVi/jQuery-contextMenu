@@ -2,20 +2,20 @@
 currentMenu: trigger-hover-autohide  
 ---
 
-# 示例： Hover Activated Context Menu With Autohide
+# 示例： 通过鼠标悬停动作触发菜单并自动隐藏
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [JavaScript代码示例](#example-code)
-- [HTML代码示例](#example-html)
+- [JavaScript 代码示例](#example-code)
+- [HTML 代码示例](#example-html)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-<span class="context-menu-one btn btn-neutral">hover over me</span>
+<span class="context-menu-one btn btn-neutral">在这里悬停鼠标</span>
 
-## JavaScript代码示例
+## JavaScript 代码示例
 
 <script type="text/javascript" class="showcase">
 $(function(){
@@ -25,7 +25,7 @@ $(function(){
         delay: 500,
         autoHide: true,
         callback: function(key, options) {
-            var m = "clicked: " + key;
+            var m = "你点击了： " + key;
             window.console && console.log(m) || alert(m); 
         },
         items: {
@@ -41,5 +41,5 @@ $(function(){
 });
 </script>
 
-## HTML代码示例
+## HTML 代码示例
 <div style="display:none;" class="showcase" data-showcase-import=".context-menu-one"></div>

@@ -2,59 +2,59 @@
 currentMenu: sub-menus  
 ---
 
-# 示例： Submenus
+# 示例： 多级菜单
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [JavaScript代码示例](#example-code)
-- [HTML代码示例](#example-html)
+- [JavaScript 代码示例](#example-code)
+- [HTML 代码示例](#example-html)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 <span class="context-menu-one btn btn-neutral">右键点击我</span>
 
-## JavaScript代码示例
+## JavaScript 代码示例
 
 <script type="text/javascript" class="showcase">
 $(function(){
     /**************************************************
-     * Context-Menu with Sub-Menu
+     * 多级菜单
      **************************************************/
     $.contextMenu({
         selector: '.context-menu-one', 
         callback: function(key, options) {
-            var m = "clicked: " + key;
+            var m = "你点击了： " + key;
             window.console && console.log(m) || alert(m); 
         },
         items: {
-            "edit": {"name": "Edit", "icon": "edit"},
-            "cut": {"name": "Cut", "icon": "cut"},
+            "edit": {"name": "编辑", "icon": "edit"},
+            "cut": {"name": "剪切", "icon": "cut"},
             "sep1": "---------",
-            "quit": {"name": "Quit", "icon": "quit"},
+            "quit": {"name": "退出", "icon": "quit"},
             "sep2": "---------",
             "fold1": {
-                "name": "Sub group", 
+                "name": "一级菜单 1", 
                 "items": {
-                    "fold1-key1": {"name": "Foo bar"},
+                    "fold1-key1": {"name": "二级菜单 1""},
                     "fold2": {
-                        "name": "Sub group 2", 
+                        "name": "二级菜单 2", 
                         "items": {
-                            "fold2-key1": {"name": "alpha"},
-                            "fold2-key2": {"name": "bravo"},
-                            "fold2-key3": {"name": "charlie"}
+                            "fold2-key1": {"name": "三级菜单 1"},
+                            "fold2-key2": {"name": "三级菜单 2"},
+                            "fold2-key3": {"name": "三级菜单 3"}
                         }
                     },
-                    "fold1-key3": {"name": "delta"}
+                    "fold1-key3": {"name": "二级菜单 3"}
                 }
             },
             "fold1a": {
-                "name": "Other group", 
+                "name": "一级菜单 2", 
                 "items": {
-                    "fold1a-key1": {"name": "echo"},
-                    "fold1a-key2": {"name": "foxtrot"},
-                    "fold1a-key3": {"name": "golf"}
+                    "fold1a-key1": {"name": "二级菜单 4"},
+                    "fold1a-key2": {"name": "二级菜单 5"},
+                    "fold1a-key3": {"name": "二级菜单 6"}
                 }
             }
         }
@@ -62,5 +62,5 @@ $(function(){
 });
 </script>
 
-## HTML代码示例
+## HTML 代码示例
 <div style="display:none;" class="showcase" data-showcase-import=".context-menu-one"></div>
